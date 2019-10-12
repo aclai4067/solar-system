@@ -8,5 +8,12 @@
         font-family: 'Ubuntu', 'Montserrat', sans-serif;
         font-size: 3em;
         margin: auto;
+        width: 100%;
+    }
+
+    .planet-image{
+        display: none;
+        height: 100%;
+        width: 100%
     }
 }
