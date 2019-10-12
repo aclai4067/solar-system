@@ -16,7 +16,7 @@ const printPlanetCards = () => {
   let cardString = '';
   for (let i = 0; i < planetArr.length; i += 1) {
     cardString += `
-      <div id='${planetArr[i].name.toLowerCase()}' class='card planetCard col-sm-3 text-center'>
+      <div id='${planetArr[i].name.toLowerCase()}' class='card planetCard col-lg-3 col-md-4 text-center'>
         <h3 class='planet-name'>${planetArr[i].name}</h3>
         <img class='planet-image' src='${planetArr[i].imageUrl}' alt='${planetArr[i].name}' />
       </div>
