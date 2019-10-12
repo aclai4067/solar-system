@@ -1,9 +1,9 @@
 import 'bootstrap';
 import '../styles/main.scss';
-import utilities from './helpers/utilities';
+import cards from './components/planetCards/planetCards';
 
 const init = () => {
-  utilities.printToDom('planetCards', 'test');
+  cards.printPlanetCards();
 };
 
 init();
