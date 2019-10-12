@@ -1,5 +1,12 @@
 @import "~bootstrap/scss/bootstrap";
 
 body{
-    background-color: blanchedalmond;
-};
+    background: rgb(0, 0, 44) url('https://images.unsplash.com/photo-1518818419601-72c8673f5852?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80') no-repeat center center fixed;
+    background-size: cover;
+}
+
+h1{
+    color:white;
+    font-family: 'Montserrat', 'Ubuntu', sans-serif;
+    margin-left: 5vw;;
+}

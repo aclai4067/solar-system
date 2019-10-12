@@ -26,8 +26,10 @@ const planets = [
   {
     name: 'Earth',
     imageUrl: 'https://solarsystem.nasa.gov/system/feature_items/images/17_earth.png',
-    description: `<p>Earth is a rocky, terrestrial planet. It has a solid and active surface with mountains, valleys, canyons, plains and so much more. Earth is special because it is an ocean planet. Water covers 70 percent of Earth's surface.</p>
-    <p>Earth's atmosphere is made mostly of nitrogen and has plenty of oxygen for us to breathe. The atmosphere also protects us from incoming meteoroids, most of which break up before they can hit the surface.</p>`,
+    description: `<p>Earth is a rocky, terrestrial planet. It has a solid and active surface with mountains, valleys, canyons, plains and so much more. 
+    Earth is special because it is an ocean planet. Water covers 70 percent of Earth's surface.</p>
+    <p>Earth's atmosphere is made mostly of nitrogen and has plenty of oxygen for us to breathe. 
+    The atmosphere also protects us from incoming meteoroids, most of which break up before they can hit the surface.</p>`,
     isGasPlanet: false,
     numberOfMoons: 1,
     nameOfLargestMoon: 'The Moon',
@@ -65,7 +67,8 @@ const planets = [
   {
     name: 'Uranus',
     imageUrl: 'https://solarsystem.nasa.gov/system/feature_items/images/29_uranus.png',
-    description: `<p>Uranus is made of water, methane, and ammonia fluids above a small rocky center. Its atmosphere is made of hydrogen and helium like Jupiter and Saturn, but it also has methane. The methane makes Uranus blue.</p>
+    description: `<p>Uranus is made of water, methane, and ammonia fluids above a small rocky center. Its atmosphere is made of hydrogen 
+    and helium like Jupiter and Saturn, but it also has methane. The methane makes Uranus blue.</p>
     <p>Uranus also has faint rings. The inner rings are narrow and dark. The outer rings are brightly colored and easier to see.</p>
     <p>Like Venus, Uranus rotates in the opposite direction as most other planets. And unlike any other planet, Uranus rotates on its side.</p>`,
     isGasPlanet: true,
