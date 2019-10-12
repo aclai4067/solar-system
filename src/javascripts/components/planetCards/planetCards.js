@@ -1,18 +1,31 @@
 import './planetCards.scss';
+import $ from 'jquery';
 import planets from '../../helpers/data/planets';
 import utilities from '../../helpers/utilities';
 
+const hoverEvent = (cardId) => {
+  $(`#${cardId}.planetCard`).hover(() => {
+    $(`#${cardId} .planet-image`).toggle('slow', 'linear');
+    $(`#${cardId} .planet-name`).toggle('slow', 'linear');
+  });
+};
+
+
 const printPlanetCards = () => {
-  let cardString = '';
   const planetArr = planets.getPlanets();
+  let cardString = '';
   for (let i = 0; i < planetArr.length; i += 1) {
     cardString += `
       <div id='${planetArr[i].name.toLowerCase()}' class='card planetCard col-sm-3 text-center'>
-        <h3>${planetArr[i].name}</h3>
+        <h3 class='planet-name'>${planetArr[i].name}</h3>
+        <img class='planet-image' src='${planetArr[i].imageUrl}' alt='${planetArr[i].name}' />
       </div>
     `;
   }
   utilities.printToDom('planetCards', cardString);
+  for (let n = 0; n < planetArr.length; n += 1) {
+    hoverEvent(`${planetArr[n].name.toLowerCase()}`);
+  }
 };
 
 export default { printPlanetCards };
