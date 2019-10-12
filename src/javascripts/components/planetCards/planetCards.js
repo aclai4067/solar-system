@@ -1,5 +1,6 @@
 import './planetCards.scss';
 import $ from 'jquery';
+import details from '../planetDetails/planetDetails';
 import planets from '../../helpers/data/planets';
 import utilities from '../../helpers/utilities';
 
@@ -9,7 +10,6 @@ const hoverEvent = (cardId) => {
     $(`#${cardId} .planet-name`).toggle('slow', 'linear');
   });
 };
-
 
 const printPlanetCards = () => {
   const planetArr = planets.getPlanets();
@@ -25,6 +25,7 @@ const printPlanetCards = () => {
   utilities.printToDom('planetCards', cardString);
   for (let n = 0; n < planetArr.length; n += 1) {
     hoverEvent(`${planetArr[n].name.toLowerCase()}`);
+    details.showDetails(`${planetArr[n].name.toLowerCase()}`);
   }
 };
 
