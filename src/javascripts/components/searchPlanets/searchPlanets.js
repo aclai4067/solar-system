@@ -2,21 +2,19 @@ import './searchPlanets.scss';
 import $ from 'jquery';
 import planets from '../../helpers/data/planets';
 import utilities from '../../helpers/utilities';
-// import planetCards from '../planetCards/planetCards';
+import planetCards from '../planetCards/planetCards';
 
 const filterPlanetList = () => {
   const planetArr = planets.getPlanets();
   const searchTerm = $('#searchTerm').val().toLowerCase();
-  const results = planetArr.filter((p) => p.name.toLowerCase().indexOf(searchTerm) !== -1 || p.description.toLowerCase().indexOf(searchTerm) !== -1
+  const planetType = $('#planetType').val();
+  const termResults = planetArr.filter((p) => p.name.toLowerCase().indexOf(searchTerm) !== -1
+  || p.description.toLowerCase().indexOf(searchTerm) !== -1
   || p.nameOfLargestMoon.toLowerCase().indexOf(searchTerm) !== -1);
-  console.log(searchTerm, results);
-  //   const searchType = $('#planetType').val();
-//   for (let i = 0; i < planetArr.length; i += 1) {
-//     if ($(`${planetArr[i].name}:contains('${searchTerm}')`)) {
-//       console.log(searchTerm, planetArr[i].name);
-//     //   planetCards.printPlanetCards();
-//     }
-//   }
+  const finalResults = termResults.filter((t) => planetType.includes('Any')
+  || (planetType.includes('Rock') && t.isGasPlanet === false)
+  || (planetType.includes('Gas') && t.isGasPlanet === true));
+  planetCards.printPlanetCards(finalResults);
 };
 
 const searchClick = () => {
